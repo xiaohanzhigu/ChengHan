@@ -27,11 +27,7 @@ namespace ChengHan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((id_tb.Text.Trim()).Length == 0)
-            {
-                MessageBox.Show("借阅编号不能为空");
-                return;
-            }
+            
             if ((name_tb.Text.Trim()).Length == 0)
             {
                 MessageBox.Show("姓名不能为空");
