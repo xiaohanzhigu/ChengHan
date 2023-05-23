@@ -75,5 +75,37 @@ namespace ChengHan
                 conn.Close();
             }
         }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            AddReader addReader = new AddReader();
+            if (addReader.ShowDialog() == DialogResult.OK)
+            {
+                initdata();
+                MessageBox.Show("添加完成");
+            }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("请选择一个要修改的记录");
+                return;
+            }
+            string readerId = listView1.SelectedItems[0].Text;
+            UpdateReader updateReader = new UpdateReader();
+            updateReader.readerId = readerId;
+            if (updateReader.ShowDialog() == DialogResult.OK)
+            {
+                initdata();
+                MessageBox.Show("修改成功");
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

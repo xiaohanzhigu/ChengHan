@@ -1,4 +1,6 @@
-﻿namespace ChengHan
+﻿using ChengHan.View;
+
+namespace ChengHan
 {
     public partial class MainForm : Form
     {
@@ -59,6 +61,11 @@
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            new BookManager().ShowDialog();
         }
     }
 }
